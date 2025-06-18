@@ -1,16 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PET HUB</title>
-    <link rel="icon" type="image/png" href="pethub.png">
+    <link rel="icon" type="image/png" href="Harshini.jpg">
+  <title>Welcome to Harshini's Resume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      padding: 50px;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: #ffffff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+      text-align: center;
+    }
+    input[type="text"], input[type="email"] {
+      width: 90%;
+      padding: 8px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-    <center>
-    <h1>WELCOME TO THE PET HUB!!</h1>
-    <h3>HELLO!!</h3>
-    <p>"Where every paw finds a home, and every tail has a tale." 🐾</p>
-    <h4>Look at my resume!!</h4>
-    <a href="resume.html">My Resume</a>
-    </center>
+
+  <div class="container">
+    <h2>👋 Welcome to My Website!</h2>
+    <p>Please fill the form to view my resume</p>
+
+    <form action="resume.html" method="get">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br>
+
+      <label for="email">Email ID:</label><br>
+      <input type="email" id="email" name="email" required><br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
 </body>
 </html>
