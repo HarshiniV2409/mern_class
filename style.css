@@ -1,0 +1,101 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  padding-top: 0;
+  background: linear-gradient(to bottom right, #fff0f5, #ffe4e1, #fffaf0);
+  background-image: url('https://www.transparenttextures.com/patterns/paw-print.png'); /* optional paw print texture */
+  color: #333;
+  background-attachment: fixed;
+}
+
+/* Cute Header Styling */
+header {
+  background: linear-gradient(to right, #ffb6c1, #ff69b4);
+  padding: 30px 20px 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 8px 16px rgba(255, 105, 180, 0.3);
+  font-family: 'Pacifico', cursive;
+}
+
+header h1 {
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 18px;
+  color: #ffeef4;
+}
+
+/* Puppy Container Layout */
+.puppy-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px;
+  gap: 25px;
+}
+
+/* Puppy Cards */
+.puppy-card {
+  width: 250px;
+  background: #fff7fb;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(255, 182, 193, 0.3);
+  border: 2px dashed #ffccd5;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.puppy-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 105, 180, 0.4);
+}
+
+.puppy-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid #ffc1e3;
+}
+
+.puppy-card h3 {
+  color: #ff69b4;
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+/* Scrollable puppy description */
+.description {
+  font-size: 14px;
+  text-align: left;
+  max-height: 100px;
+  overflow-y: auto;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #fff0f8;
+  border-radius: 10px;
+  border: 1px dashed #fdb9c8;
+}
+
+/* Scrollbar Styling */
+.description::-webkit-scrollbar {
+  width: 6px;
+}
+.description::-webkit-scrollbar-thumb {
+  background-color: #ff90b3;
+  border-radius: 4px;
+}
