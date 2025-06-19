@@ -1,0 +1,53 @@
+body {
+  background-color: #f0f8ff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.game-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #aaddf8;
+  box-shadow: 0 0 15px rgba(12, 0, 0, 0.895);
+  border-radius: 12px;
+}
+
+h1 {
+  color: #333;
+}
+
+.score-board {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.choices {
+  margin: 20px 0;
+}
+
+.choice {
+  font-size: 40px;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #e0f7fa;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.choice:hover {
+  background-color: #b2ebf2;
+}
+
+.result {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #444;
+}
