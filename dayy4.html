@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Console Example</title>
+</head>
+<body>
+  
+  <div id="DOM">
+    <h1>Hello</h1>
+  </div>
+  
+  <script>
+       let obj=document.getElementById("DOM");
+    obj.addEventListener("click",()=>{
+      let head_obj=document.querySelector("h1");
+      console.log(head_obj);
+      head_obj.innerText="clicked";
+
+    })
+  </script>
+</body>
+</html>
