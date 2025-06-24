@@ -1,0 +1,148 @@
+use kec
+switched to db kec
+db.createCollection("User")
+{ ok: 1 }
+db.User.insertOne({
+name:"x",
+age:25'
+email:"x@gmail.com"})
+SyntaxError: Unterminated string constant. (3:6)
+
+[0m [90m 1 |[39m db[33m.[39m[33mUser[39m[33m.[39minsertOne({
+ [90m 2 |[39m name[33m:[39m[32m"x"[39m[33m,[39m
+[31m[1m>[22m[39m[90m 3 |[39m age[33m:[39m[35m25[39m[32m'[39m
+ [90m   |[39m       [31m[1m^[22m[39m
+ [90m 4 |[39m email[33m:[39m[32m"x@gmail.com"[39m})[0m
+db.User.insertOne({
+name:"x",
+age:25,
+email:"x@gmail.com"})
+{
+  acknowledged: true,
+  insertedId: ObjectId('685a265e893872c24af51189')
+}
+db.User.insertMany([
+  {name:"Harsh",age:19,email:"harsh@gmail.com"},
+  {name:"Deva",age:18,email:"deva@gmail.com"},
+  {name:"Kanika",age:20,email:"kanika@gmail.com"}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('685a2bd4893872c24af5118a'),
+    '1': ObjectId('685a2bd4893872c24af5118b'),
+    '2': ObjectId('685a2bd4893872c24af5118c')
+  }
+}
+db.User.insertMany([
+{name:"Stalin.A",age:27,email:"stalin@gmail.com"},
+{name:"Harsh",age:19,email:"harsh@gmail.com"},
+{name:"Deva",age:18,email:"deva@gmail.com"},
+{name:"Kanika",age:20,email:"kanika@gmail.com"},
+  {name:"Lathika",age:60,email:"lathika@gmail.com"},
+  {}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('685a2cdd893872c24af5118d'),
+    '1': ObjectId('685a2cdd893872c24af5118e'),
+    '2': ObjectId('685a2cdd893872c24af5118f'),
+    '3': ObjectId('685a2cdd893872c24af51190'),
+    '4': ObjectId('685a2cdd893872c24af51191'),
+    '5': ObjectId('685a2cdd893872c24af51192')
+  }
+}
+db.USer.find()
+db.User.find()
+{
+  _id: ObjectId('685a265e893872c24af51189'),
+  name: 'x',
+  age: 25,
+  email: 'x@gmail.com'
+}
+{
+  _id: ObjectId('685a2bd4893872c24af5118a'),
+  name: 'Harsh',
+  age: 19,
+  email: 'harsh@gmail.com'
+}
+{
+  _id: ObjectId('685a2bd4893872c24af5118b'),
+  name: 'Deva',
+  age: 18,
+  email: 'deva@gmail.com'
+}
+{
+  _id: ObjectId('685a2bd4893872c24af5118c'),
+  name: 'Kanika',
+  age: 20,
+  email: 'kanika@gmail.com'
+}
+{
+  _id: ObjectId('685a2cdd893872c24af5118d'),
+  name: 'Stalin.A',
+  age: 27,
+  email: 'stalin@gmail.com'
+}
+{
+  _id: ObjectId('685a2cdd893872c24af5118e'),
+  name: 'Harsh',
+  age: 19,
+  email: 'harsh@gmail.com'
+}
+{
+  _id: ObjectId('685a2cdd893872c24af5118f'),
+  name: 'Deva',
+  age: 18,
+  email: 'deva@gmail.com'
+}
+{
+  _id: ObjectId('685a2cdd893872c24af51190'),
+  name: 'Kanika',
+  age: 20,
+  email: 'kanika@gmail.com'
+}
+{
+  _id: ObjectId('685a2cdd893872c24af51191'),
+  name: 'Lathika',
+  age: 60,
+  email: 'lathika@gmail.com'
+}
+{
+  _id: ObjectId('685a2cdd893872c24af51192')
+}
+db.User.findOne()
+{
+  _id: ObjectId('685a265e893872c24af51189'),
+  name: 'x',
+  age: 25,
+  email: 'x@gmail.com'
+}
+db.User.find({name:"harsh"})
+db.User.find({name:"Harsh"})
+{
+  _id: ObjectId('685a2bd4893872c24af5118a'),
+  name: 'Harsh',
+  age: 19,
+  email: 'harsh@gmail.com'
+}
+{
+  _id: ObjectId('685a2cdd893872c24af5118e'),
+  name: 'Harsh',
+  age: 19,
+  email: 'harsh@gmail.com'
+}
+db.User.updateOne({name:"Leo"},{$set:{name:"Harsh"})
+SyntaxError: Unexpected token, expected "," (1:51)
+
+[0m[31m[1m>[22m[39m[90m 1 |[39m db[33m.[39m[33mUser[39m[33m.[39mupdateOne({name[33m:[39m[32m"Leo"[39m}[33m,[39m{$set[33m:[39m{name[33m:[39m[32m"Harsh"[39m})
+ [90m   |[39m                                                    [31m[1m^[22m[39m[0m
+db.User.updateOne({name:"Leo"},{$set:{name:"Harsh"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+kec
+
